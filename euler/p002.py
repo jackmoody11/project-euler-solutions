@@ -1,3 +1,6 @@
+# Compute the sum of the even fibonacci numbers less than 4,000,000
+
+
 def fib(n):
     a, b = 1, 1
     fibs = [1, ]
@@ -6,6 +9,7 @@ def fib(n):
         fibs.append(a)
     return fibs
 
+
 if __name__ == '__main__':
-    fibs = fib(4_000_000)
-    print(sum(fib for fib in fibs if fib % 2 == 0))
+    fs = fib(4_000_000)
+    print(sum(f for f in fs if f % 2 == 0))

@@ -1,3 +1,4 @@
+# Compute the max prime factor of 600,851,475,143
 from math import sqrt
 
 
