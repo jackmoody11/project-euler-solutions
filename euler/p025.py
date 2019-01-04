@@ -8,4 +8,9 @@ def fib(n):
     return bx
 
 
-print(fib(10**(1000 - 1)))  # have to subtract 1 since 10^x gives an x + 1 digit number
+def compute():
+    return fib(10**(1000 - 1))  # 10**x gives an x + 1 digit number
+
+
+if __name__ == '__main__':
+    print(compute())
