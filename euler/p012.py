@@ -1,4 +1,5 @@
 # Find the smallest triangle number that has over five hundred divisors
+# Need to check that this works (is currently taking too long)
 from math import sqrt
 
 
