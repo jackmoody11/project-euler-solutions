@@ -40,8 +40,10 @@ def count_letters(n):
             return letters[hundreds] + "hundred" + "and" + letters[tens * 10] + letters[ones]
 
 
-letter_count = 0
-for i in range(1, 1001):
-    letter_count += len(count_letters(i))
+def compute():
+    letter_count = 0
+    for i in range(1, 1001):
+        letter_count += len(count_letters(i))
+    return letter_count
 
-print(letter_count)
+print(compute())
