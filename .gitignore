@@ -1,0 +1,10 @@
+# Python
+/venv
+.idea
+scratch.py # A file for running by quick thoughts on my local computer
+
+# C
+*.out
+
+# VS Code
+.vscode/
