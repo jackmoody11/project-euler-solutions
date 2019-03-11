@@ -10,12 +10,12 @@ def is_prime(n):
 
 
 def prime_factors(x):
-    divs = []
+    max_div = 0
     for i in range(2, int(sqrt(x)) + 1):
         if x % i == 0 and is_prime(i):
-            divs.append(i)
-    return divs
+            max_div = i
+    return max_div
 
 
 if __name__ == '__main__':
-    print(max(prime_factors(600851475143)))
+    print(prime_factors(600851475143))
