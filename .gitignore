@@ -5,6 +5,7 @@ scratch.py # A file for running by quick thoughts on my local computer
 
 # C
 *.out
+*.o
 
 # VS Code
 .vscode/
