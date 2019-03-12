@@ -1,22 +1,19 @@
 #include <math.h>
 #include "utils.h"
 
-int is_prime(int n)
+int is_prime(long n)
 {
-    if (n < 2)
-    {
-        return 0;
+   if (n == 2) {
+       return 1;
     }
-    int last = (int) sqrt(n) + 1;  /* conservatively safe */
-
-    for (int j = 2; j <= last; ++j)
-    {
-        if (0 == n % j)
-        {
-        return 0;
-        }
-    }
-  return 1;
+   long limit = (long) floor(sqrt(n)) + 1;
+   for(long i = 2; i < limit; i++)
+   {
+        if (n % i == 0) {
+           return 0;
+        }  
+   }
+   return 1;
 }
 
 long max_prime_factor(long n)
