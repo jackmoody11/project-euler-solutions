@@ -1,6 +1,7 @@
-# Find starting number that has longest
-# collatz string (iterations to 1)
+# Find starting number (between 1 and 1,000,000) that
+# has the longest collatz string (iterations to 1)
 
+# Unsolved - need to optimize algorithm (takes too long)
 
 def length_collatz(n):
     i = 1

@@ -12,6 +12,8 @@ def find_divisors(n):
 
 
 def compute():
+    # We know that to have 500 divisors, num >= 500
+    # i * (i + 1) / 2 is >= 500 when i = 32, so start there
     i = 7
     while True:
         num = sum(range(i))
