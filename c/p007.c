@@ -5,9 +5,11 @@ int main()
 {
     int p = 0;
     long x = 1;
-    while(p < 10001){
+    while (p < 10001)
+    {
         x += 1;
-        if (is_prime(x)) {
+        if (is_prime(x))
+        {
             p += 1;
         }
     }
