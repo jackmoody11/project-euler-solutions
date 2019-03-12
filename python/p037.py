@@ -7,7 +7,6 @@ def is_truncatable_prime(n):
             continue
         else:
             return False
-    print(n)
     return True
 
 def compute():
@@ -22,5 +21,4 @@ def compute():
     return s
 
 if __name__ == '__main__':
-    print(is_truncatable_prime(11))
     print(compute())
