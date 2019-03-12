@@ -23,5 +23,10 @@ p006: p006.c
 p007: p007.c
 	$(CC) utils.c p007.c -o p007.o
 
+p009: p009.c
+	$(CC) p009.c -o p009.o
+
+p010: p010.c
+	$(CC) utils.c p010.c -o p010.o
 clean:
 	$(RM) *.o
