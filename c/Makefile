@@ -11,5 +11,9 @@ p001: p001.c
 p002: p002.c
 	$(CC) p002.c -o p002.o
 
+p003: p003.c
+	$(CC) utils.c p003.c -o p003.o
+
+
 clean:
 	$(RM) *.o
