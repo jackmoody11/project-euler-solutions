@@ -17,5 +17,7 @@ p003: p003.c
 p005: p005.c
 	$(CC) p005.c -o p005.o
 
+p006: p006.c
+	$(CC) p006.c -o p006.o
 clean:
 	$(RM) *.o
