@@ -1,16 +1,17 @@
 # Project Euler
 _____________
 
-This repo hosts my personal solutions to Project Euler questions. 
-This repo is intended to help with ideas after writing your own 
-solutions.
+This repo hosts my personal solutions to Project Euler questions and is intended to help with ideas **after** writing your own solutions.
 
-It is the best to solve the problem first before looking at the code here. While it is not always easy to have an optimized solution at first, creating a working algorithm is the primary goal. After you've solved the problem (you can check if you got it right on the [Project Euler website](https://projecteuler.net)), then you can see if my solutions might help you optimize further.
+### The Process
+
+1. Solve the problem on your own
+2. Check if you got it right on the [Project Euler website](https://projecteuler.net)
+3. See if my solutions give you any ideas on how to optimize
+4. If you found a better way, send a pull request!
 
 
-My solutions are by **no** means optimized. They are a work in progress. 
-
-Send in a pull request if you have an improvement (faster or simpler). I am always interested to see how others approach these problems.
+Note: My solutions are by **no** means optimized. They are a work in progress. 
 
 
 | Problem # | Python | C |
