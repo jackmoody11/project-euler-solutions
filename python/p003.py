@@ -1,12 +1,6 @@
 # Compute the max prime factor of 600,851,475,143
 from math import sqrt
-
-
-def is_prime(n):
-    for i in range(2, int(sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
+from utils import is_prime
 
 
 def prime_factors(x):

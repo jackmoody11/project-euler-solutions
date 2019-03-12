@@ -1,12 +1,6 @@
 # Find 10,001 prime number
 from math import sqrt
-
-
-def is_prime(n):
-    for i in range(2, int(sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
+from utils import is_prime
 
 
 def nth_prime(n):
