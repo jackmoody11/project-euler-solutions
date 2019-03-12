@@ -10,6 +10,8 @@ motions of creating a working algorithm is much more important. After you've sol
 
 My solutions are by no means optimized. They are a work in progress, but I figure they could be beneficial to others. Send in a pull request if you have an improvement. I am always interested to see how others approach these problems.
 
+<center>
+
 | Problem # | Python | C |
 | ------ | ------ | - |
 | 001 | [Solution](/python/p001.py) | [Solution](/c/p001.c) |
@@ -42,3 +44,5 @@ My solutions are by no means optimized. They are a work in progress, but I figur
 | 028 | X | X |
 | 029 | [Solution](/python/p029.py) | X |
 | 030 | [Solution](/python/p030.py) | X |
+
+</center>
