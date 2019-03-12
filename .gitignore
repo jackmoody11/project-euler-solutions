@@ -2,6 +2,7 @@
 /venv
 .idea
 python/scratch.py # A file for running by quick thoughts on my local computer
+__pycache__/
 
 # C
 *.out
