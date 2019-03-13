@@ -29,12 +29,12 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 011 | X | X |
 | 012 | [Solution](/python/p012.py) | X |
 | 013 | [Solution](/python/p013.py) | X |
-| 014 | X | X |
+| 014 | [Solution](/python/p014.py) | X |
 | 015 | [Solution](/python/p015.py) | [Solution](/c/p015.c) |
 | 016 | [Solution](/python/p016.py) | X |
 | 017 | [Solution](/python/p017.py) | X |
-| 018 | X | X |
-| 019 | X | X |
+| 018 | [Solution](/python/p018.py) | X |
+| 019 | [Solution](/python/p019.py) - [Alternate Solution](/python/p019_alt.py) | X |
 | 020 | [Solution](/python/p020.py) | X |
 | 021 | [Solution](/python/p021.py) | X |
 | 022 | [Solution](/python/p022.py) | X |
