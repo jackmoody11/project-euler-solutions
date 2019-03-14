@@ -11,6 +11,7 @@ def proper_divisors(n):
             divs.add(n // i)
     return divs.difference({n})
 
+
 def list_abundants(n):
     abundants = []
     for i in range(12, n + 1):
@@ -20,10 +21,11 @@ def list_abundants(n):
 
 
 def compute():
-    combos = list(combinations(list_abundants(28123), 2))
-    sms = {sum(i) for i in combos}
+    abundants = list_abundants(28123)
+    combos = list(combinations(abundants, 2)) + list((i, i) for i in abundants)
+    sms = list(set(sum(i) for i in combos))
     res = sum([j for j in range(1, 28124) if j not in sms])
-    return sum([j for j in range(1, 28124) if j not in sms])
+    return res
 
 
 if __name__ == '__main__':
