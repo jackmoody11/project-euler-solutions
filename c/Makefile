@@ -29,8 +29,11 @@ p009: p009.c
 p010: p010.c
 	$(CC) utils.c p010.c -o p010.o
 
+p012: p012.c
+	$(CC) utils.c p012.c -o p012.o
+
 p015: p015.c
-	$(CC) p015.c -o p015.o
+	$(CC) p015.c -o p015.o -lgmp
 
 clean:
 	$(RM) *.o
