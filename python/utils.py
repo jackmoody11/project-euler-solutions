@@ -15,3 +15,13 @@ def is_palindrome(s):
         return True
     else:
         return False
+
+def prod(l):
+    """
+    Takes a list and returns product of numbers in list.
+    Will return 1 if list is empty.
+    """
+    p = 1
+    for arg in l:
+        p *= arg
+    return p
