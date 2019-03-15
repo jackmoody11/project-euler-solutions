@@ -4,11 +4,7 @@ from utils import is_prime
 
 
 def compute():
-    s = 0
-    for i in range(2, 2_000_001):
-        if is_prime(i):
-            s += i
-    return s
+    return sum(i for i in range(2, 2_000_001) if is_prime(i))
 
 
 if __name__ == '__main__':
