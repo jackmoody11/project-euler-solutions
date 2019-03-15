@@ -1,4 +1,5 @@
 from math import sqrt
+from math import factorial
 
 
 def is_prime(n):
@@ -9,6 +10,9 @@ def is_prime(n):
             return False
     return True
 
+def binom(n, r):
+    """Returns 'n choose r'. """
+    return (factorial(n) / ((factorial(r) * factorial(n - r))))
 
 def is_palindrome(s):
     if s == s[::-1]:
@@ -18,8 +22,8 @@ def is_palindrome(s):
 
 def prod(l):
     """
-    Takes a list and returns product of numbers in list.
-    Will return 1 if list is empty.
+    Takes an iterable and returns product of numbers in iterable.
+    Will return 1 if iterable is empty.
     """
     p = 1
     for arg in l:
