@@ -1,5 +1,4 @@
 # Project Euler
-_____________
 
 This repo hosts my personal solutions to Project Euler questions and is intended to help with ideas **after** writing your own solutions.
 

@@ -2,7 +2,7 @@ import csv
 import string
 
 
-file = "p022_names.txt"
+file = "p022.txt"
 
 
 def calc_name_score(name):

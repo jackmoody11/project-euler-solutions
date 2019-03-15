@@ -37,3 +37,13 @@ long max_prime_factor(long n)
     }
     return max_div;
 }
+
+long sum_to(long n)
+{
+    long count = 0;
+    for(long i = 0; i <= n; i++)
+    {
+        count += i;
+    }
+    return count;    
+}
