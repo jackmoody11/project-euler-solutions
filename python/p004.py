@@ -4,7 +4,7 @@ from utils import is_palindrome
 def compute():
     max_p = 0
     for i in range(100, 1000):
-        for j in range(100, 1000):
+        for j in range(100, i + 1):
             num = i * j
             if is_palindrome(str(num)) and num > max_p:
                 max_p = num
