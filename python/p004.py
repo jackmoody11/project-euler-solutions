@@ -2,17 +2,13 @@
 from utils import is_palindrome
 
 def compute():
-    palindromes = []
+    max_p = 0
     for i in range(100, 1000):
         for j in range(100, 1000):
-            num = str(i * j)
-            if is_palindrome(num):
-                palindromes.append((int(i), int(j), int(num)))
-    ps = [p[2] for p in palindromes]
-    ix = [p[0] for p in palindromes]
-    jx = [p[1] for p in palindromes]
-    mx = ps.index(max(ps))
-    return ix[mx], jx[mx], ps[mx]
+            num = i * j
+            if is_palindrome(str(num)) and num > max_p:
+                max_p = num
+    return max_p
 
 if __name__ == '__main__':
-    print("Max palindrome: ", compute()[2])
+    print("Max palindrome: ", compute())
