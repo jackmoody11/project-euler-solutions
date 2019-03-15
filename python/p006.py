@@ -15,6 +15,4 @@ def compute():
     return square_of_sum(100) - sum_of_squares(100)
 
 if __name__ == '__main__':
-    print(square_of_sum(100))
-    print(sum_of_squares(100))
     print(compute())
