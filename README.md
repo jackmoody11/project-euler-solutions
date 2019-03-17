@@ -1,5 +1,4 @@
 # Project Euler
-_____________
 
 This repo hosts my personal solutions to Project Euler questions and is intended to help with ideas **after** writing your own solutions.
 
@@ -42,7 +41,7 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 024 | [Solution](/python/p024.py) | X |
 | 025 | [Solution](/python/p025.py) | X |
 | 026 | X | X |
-| 027 | X | X |
+| 027 | [Solution](/python/p027.py) | X |
 | 028 | X | X |
 | 029 | [Solution](/python/p029.py) | X |
 | 030 | [Solution](/python/p030.py) | X |
