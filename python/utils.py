@@ -1,5 +1,6 @@
 from math import sqrt
 from math import factorial
+import string
 
 
 def is_prime(n):
@@ -39,3 +40,10 @@ def is_pandigital(n):
         if str(i) not in string_n:
             return False
     return True
+
+def word_score(name):
+    c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
+    score = 0
+    for c in name:
+        score += c_scores[c]
+    return score
