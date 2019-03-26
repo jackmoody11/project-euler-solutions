@@ -15,5 +15,5 @@ def compute():
         prod *= int(my_str[10**i])
     print(prod)
 
-compute()
-    
+if __name__ == "__main__":
+    print(compute())    
