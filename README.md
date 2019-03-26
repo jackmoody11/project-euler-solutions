@@ -53,5 +53,6 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 036 | [Solution](/python/p036.py) | X |
 | 037 | [Solution](/python/p037.py) | X |
 | 038 | [Solution](/python/p038.py) | X |
+| 039 | [Solution](/python/p039.py) | [Solution](/c/p039.py) |
 | ... | X | X |
 | 067 | [Solution](/python/p067.py) | X |
