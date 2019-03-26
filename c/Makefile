@@ -38,6 +38,9 @@ p010: p010.c
 p012: p012.c
 	$(CC) utils.c p012.c -o p012.o
 
+p014: p014.c
+	$(CC) utils.c p014.c -o p014.o
+
 p015: p015.c
 	$(CC) p015.c -o p015.o -lgmp
 
