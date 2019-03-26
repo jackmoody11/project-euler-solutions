@@ -40,9 +40,9 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 023 | [Solution](/python/p023.py) | X |
 | 024 | [Solution](/python/p024.py) | X |
 | 025 | [Solution](/python/p025.py) | X |
-| 026 | X | X |
+| 026 | [Solution](/python/p026.py) | X |
 | 027 | [Solution](/python/p027.py) | X |
-| 028 | X | X |
+| 028 | [Solution](/python/p028.py) | X |
 | 029 | [Solution](/python/p029.py) | X |
 | 030 | [Solution](/python/p030.py) | X |
 | 031 | X | X |
