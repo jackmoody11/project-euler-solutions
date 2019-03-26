@@ -44,5 +44,11 @@ p014: p014.c
 p015: p015.c
 	$(CC) p015.c -o p015.o -lgmp
 
+p016: p016.c
+	$(CC) p016.c -o p016.o -lgmp
+
+p039: p039.c
+	$(CC) p039.c -o p039.o
+
 clean:
 	$(RM) *.o
