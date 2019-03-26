@@ -1,16 +1,7 @@
 import csv
-import string
-
+from utils import word_score
 
 file = "p022.txt"
-
-
-def calc_name_score(name):
-    c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
-    score = 0
-    for c in name:
-        score += c_scores[c]
-    return score
 
 
 with open(file) as f:
@@ -20,6 +11,6 @@ with open(file) as f:
 name_list.sort()
 score_list = []
 for i in range(len(name_list)):
-    score_list.append(calc_name_score(name_list[i]) * (i + 1))
+    score_list.append(word_score(name_list[i]) * (i + 1))
 
 print(sum(score_list))
