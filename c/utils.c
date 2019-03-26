@@ -37,3 +37,23 @@ long max_prime_factor(long n)
     }
     return max_div;
 }
+
+int is_palindrome(long n)
+{
+    long reverse = 0;
+    long t = n;
+    while (t != 0)
+    {
+        reverse *= 10;
+        reverse += t % 10;
+        t = (long) floor(t / 10);
+    }
+    if (n == reverse)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
