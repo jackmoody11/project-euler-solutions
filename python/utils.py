@@ -29,3 +29,13 @@ def prod(l):
     for arg in l:
         p *= arg
     return p
+
+def is_pandigital(n):
+    digits = len(n)
+    if digits >= 10:
+        return False
+    string_n = str(n)
+    for i in range(1, digits + 1):
+        if str(i) not in string_n:
+            return False
+    return True
