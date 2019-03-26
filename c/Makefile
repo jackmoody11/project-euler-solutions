@@ -26,6 +26,9 @@ p006: p006.c
 p007: p007.c
 	$(CC) utils.c p007.c -o p007.o
 
+p008: p008.c
+	$(CC) utils.c p008.c -o p008.o
+
 p009: p009.c
 	$(CC) p009.c -o p009.o
 
