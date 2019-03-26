@@ -46,8 +46,8 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 029 | [Solution](/python/p029.py) | X |
 | 030 | [Solution](/python/p030.py) | X |
 | 031 | X | X |
-| 032 | X | X |
-| 033 | X | X |
+| 032 | [Solution](/python/p032.py) | X |
+| 033 | [Solution](/python/p033.py) | X |
 | 034 | [Solution](/python/p034.py) | X |
 | 035 | [Solution](/python/p035.py) | X |
 | 036 | [Solution](/python/p036.py) | X |
