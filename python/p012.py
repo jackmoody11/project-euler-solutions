@@ -24,6 +24,8 @@ def compute():
         if num_divisors(num) > 500:
             return num
         else:
+            # We are working with triangle numbers, so add 1, 2, 3, etc.
+            # until num. of divisors > 500
             i += 1
             num += i
 
