@@ -1,7 +1,8 @@
 # Python
 /venv
 .idea
-python/scratch.py # A file for running by quick thoughts on my local computer
+# A file for running by quick thoughts on my local computer
+python/scratch.py 
 __pycache__/
 
 # C
