@@ -22,13 +22,13 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 005 | [Solution](/python/p005.py) | [Solution](/c/p005.c) |
 | 006 | [Solution](/python/p006.py) | [Solution](/c/p006.c) |
 | 007 | [Solution](/python/p007.py) | [Solution](/c/p007.c) |
-| 008 | [Solution](/python/p008.py) | X |
+| 008 | [Solution](/python/p008.py) | [Solution](/c/p008.c) |
 | 009 | [Solution](/python/p009.py) | [Solution](/c/p009.c) |
 | 010 | [Solution](/python/p010.py) | [Solution](/c/p010.c) |
 | 011 | [Solution](/python/p011.py) | X |
 | 012 | [Solution](/python/p012.py) | [Solution](/c/p012.c) |
 | 013 | [Solution](/python/p013.py) | X |
-| 014 | [Solution](/python/p014.py) | X |
+| 014 | [Solution](/python/p014.py) | [Solution](/c/p014.c) |
 | 015 | [Solution](/python/p015.py) | [Solution](/c/p015.c) |
 | 016 | [Solution](/python/p016.py) | X |
 | 017 | [Solution](/python/p017.py) | X |
