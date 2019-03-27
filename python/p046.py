@@ -1,4 +1,4 @@
-from utils import is_prime, prime, primes
+from utils import is_prime, primes
 from math import sqrt
 
 def compute():

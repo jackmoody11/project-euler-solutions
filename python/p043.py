@@ -1,7 +1,7 @@
-from utils import prime
+from utils import primes, primes_list
 from itertools import permutations
 
-PRIMES = [prime(i) for i in range(1, 8)]
+PRIMES = primes_list(7)
 
 
 def follows_pattern(n):

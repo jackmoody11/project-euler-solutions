@@ -4,22 +4,43 @@ import string
 
 
 def is_prime(n):
+    # Negative numbers don't count as primes
     if n < 2:
         return False
-    for i in range(2, int(sqrt(n)) + 1):
-        if n % i == 0:
+
+    # primes always gives 2 in list, so return True
+    # if given n = 2
+    elif n == 2:
+        return True
+    
+    potential_prime_divisors = primes(int(n**0.5) + 1)
+    for p in potential_prime_divisors:
+        if n % p == 0:
             return False
     return True
 
-def prime(n):
-    prime_count = 0
-    i = 1
+def primes_list(n):
+    if n == 1:
+        return [2]
+    elif n == 2:
+        return [2, 3]
+    prime_count = 2
+    i = 5
+    p_list = [2, 3]
     while prime_count < n:
-        i += 1
         if is_prime(i):
+            p_list.append(i)
             prime_count += 1
-        
-    return i
+        i += 2
+    return p_list
+
+def primes(n):
+    """ Returns  a list of primes < n """
+    sieve = [True] * n
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i]:
+            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+    return [2] + [i for i in range(3,n,2) if sieve[i]]
 
 def binom(n, r):
     """Returns 'n choose r'. """
