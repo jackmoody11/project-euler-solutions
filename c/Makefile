@@ -5,50 +5,54 @@ default: all
 
 all:
 
-p001: p001.c
-	$(CC) p001.c -o p001.o
 
-p002: p002.c
+# $< takes first dependency name and $@ takes target name
+# target: dependencies
+
+p001.o: p001.c
+	$(CC) $< -o $@
+
+p002.o: p002.c
 	$(CC) p002.c -o p002.o
 
-p003: p003.c
-	$(CC) utils.c p003.c -o p003.o
+p003.o: p003.c
+	$(CC) utils.c $< -o $@
 
-p004: p004.c
-	$(CC) utils.c p004.c -o p004.o
+p004.o: p004.c
+	$(CC) utils.c $< -o $@
 
-p005: p005.c
-	$(CC) p005.c -o p005.o
+p005.o: p005.c
+	$(CC) $< -o $@
 
-p006: p006.c
-	$(CC) p006.c -o p006.o
+p006.o: p006.c
+	$(CC) $< -o $@
 
-p007: p007.c
-	$(CC) utils.c p007.c -o p007.o
+p007.o: p007.c
+	$(CC) utils.c $< -o $@
 
-p008: p008.c
-	$(CC) utils.c p008.c -o p008.o
+p008.o: p008.c
+	$(CC) utils.c $< -o $@
 
-p009: p009.c
-	$(CC) p009.c -o p009.o
+p009.o: p009.c
+	$(CC) $< -o $@
 
-p010: p010.c
-	$(CC) utils.c p010.c -o p010.o
+p010.o: p010.c
+	$(CC) utils.c $< -o $@
 
-p012: p012.c
-	$(CC) utils.c p012.c -o p012.o
+p012.o: p012.c
+	$(CC) utils.c $< -o $@
 
-p014: p014.c
-	$(CC) utils.c p014.c -o p014.o
+p014.o: p014.c
+	$(CC) utils.c $< -o $@
 
-p015: p015.c
-	$(CC) p015.c -o p015.o -lgmp
+p015.o: p015.c
+	$(CC) $< -o $@ -lgmp
 
-p016: p016.c
-	$(CC) p016.c -o p016.o -lgmp
+p016.o: p016.c
+	$(CC) $< -o $@ -lgmp
 
-p039: p039.c
-	$(CC) p039.c -o p039.o
+p039.o: p039.c
+	$(CC) $< -o $@
 
 clean:
 	$(RM) *.o
