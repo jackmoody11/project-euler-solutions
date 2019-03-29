@@ -9,7 +9,9 @@ def fib(n):
             total += a
     return total
 
+def compute():
+    return fib(4_000_000)
+
 
 if __name__ == '__main__':
-    total = fib(4_000_000)
-    print(total)
+    print(compute())

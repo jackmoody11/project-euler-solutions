@@ -17,5 +17,9 @@ def amicables(n):
         if i == ddi != di:
             ams.append(i)
     return ams
+
+def compute():
+    return sum(amicables(10_000))
+
 if __name__ == '__main__':
-    print(sum(amicables(10_000)))
+    print(compute())

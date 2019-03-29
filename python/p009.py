@@ -2,13 +2,11 @@
 # Then print the product a * b * c
 from math import sqrt
 
-
-def find_ab():
+def compute():
     for a in range(1, 500):
         for b in range(a, 1000):
             if a + b + sqrt(a**2 + b**2) == 1000:
                 return a * b * sqrt(a**2 + b**2)
 
-
 if __name__ == '__main__':
-    print(find_ab())
+    print(compute())

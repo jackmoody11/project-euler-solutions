@@ -46,4 +46,5 @@ def compute():
         letter_count += len(count_letters(i))
     return letter_count
 
-print(compute())
+if __name__ == "__main__":
+    print(compute())

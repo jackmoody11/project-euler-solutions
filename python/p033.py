@@ -28,4 +28,5 @@ def compute():
     return int(denom / gcd(num, denom))
     
 
-print(compute())
+if __name__ == "__main__":
+    print(compute())

@@ -12,4 +12,4 @@ def compute():
     return max_p
 
 if __name__ == '__main__':
-    print("Max palindrome: ", compute())
+    print(compute())

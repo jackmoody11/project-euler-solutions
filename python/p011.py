@@ -1,19 +1,21 @@
 from utils import prod
 
-filename = "p011.txt"
 
-# convert to list of lists
-with open(filename) as f:
-    matrix = [list(map(int, line.split())) for line in f]
 
 def compute():
-    # Start in the top left corner of the matrix
-    # Go from left to right and (if possible) check 
-    # products down, right, and diagonally (left and right)
-    # We don't need to check left, since the right product
-    # will catch all products which would be caught with
-    # left
-    max_p = 0
+    """    
+    Start in the top left corner of the matrix
+    Go from left to right and (if possible) check 
+    products down, right, and diagonally (left and right)
+    We don't need to check left, since the right product
+    will catch all products which would be caught with
+    left
+    """
+    filename = "p011.txt"
+    # convert to list of lists
+    with open(filename) as f:
+        matrix = [list(map(int, line.split())) for line in f]
+        max_p = 0
     for r in range(len(matrix) - 4):
         for c in range(len(matrix)):
             down = prod((matrix[r-i][c] for i in range(4)))
