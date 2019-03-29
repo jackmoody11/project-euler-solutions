@@ -20,7 +20,7 @@ def compute():
         if res[0] and res[1] > pd_max:
             pd_max = res[1]
             index = i
-    return pd_max, index
+    return pd_max
 
 if __name__ == '__main__':
     print(compute())
