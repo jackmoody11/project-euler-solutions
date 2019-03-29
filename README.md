@@ -64,5 +64,9 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 047 | X | X |
 | 048 | [Solution](/python/p048.py) | X |
 | 049 | [Solution](/python/p049.py) | X |
+| 050 | X | X |
+| 051 | X | X |
+| 052 | [Solution](/python/p052.py) | X |
+| 053 | [Solution](/python/p053.py) | X |
 | ... | X | X |
 | 067 | [Solution](/python/p067.py) | X |
