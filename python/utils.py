@@ -2,8 +2,49 @@ from math import sqrt
 from math import factorial
 from itertools import permutations
 from itertools import combinations
+from itertools import chain
 import string
 
+
+########################################
+############# Basic Math ###############
+########################################
+
+def prod(l):
+    """
+    Takes an iterable and returns product of numbers in iterable.
+    Will return 1 if iterable is empty.
+    """
+    p = 1
+    for arg in l:
+        p *= arg
+    return p
+
+def binom(n, r):
+    """Returns 'n choose r'. """
+    return (factorial(n) / ((factorial(r) * factorial(n - r))))
+
+def lcm(*nums):
+    """
+    Find least common multiple of multiple numbers
+    >>> lcm(*range(1, 3))
+    6
+    >>> lcm(2,3,4)
+    12
+    """
+    factors_list = [factors(i) for i in nums]
+    all_factors = set(chain(*factors_list))
+    factor_counts = [{n: fl.count(n) for n in set(fl)} for fl in factors_list]
+    result = 1
+    for factor in all_factors:
+        max_occurences = max([fc.get(factor, 0) for fc in factor_counts])
+        result *= factor ** max_occurences
+    return result
+    
+
+########################################
+################ Primes ################
+########################################
 
 def is_prime(n):
     """ Test if integer n is prime. """
@@ -56,6 +97,56 @@ def prime_cache(n):
             sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
     return sieve
 
+
+########################################
+############ String Scoring ############
+########################################
+
+def word_score(name):
+    c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
+    score = 0
+    for c in name:
+        score += c_scores[c]
+    return score
+
+
+########################################
+########## Digit Manipulation ##########
+########################################
+
+def is_palindrome(s):
+    """ Test whether or not string is palindrome """
+    if s == s[::-1]:
+        return True
+    else:
+        return False
+
+def digit_permutations(n):
+    return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
+
+def count_digits(n):
+    """ Count digits in positive integer n. """
+    count = 0
+    while n >= 1:
+        count += 1
+        n //= 10
+    return count
+
+def is_pandigital(n):
+    digits = len(n)
+    if digits >= 10:
+        return False
+    string_n = str(n)
+    for i in range(1, digits + 1):
+        if str(i) not in string_n:
+            return False
+    return True
+
+
+########################################
+############### Factors ################
+########################################
+
 def factors(n):
     """ Return list of prime factors for integer n. """
     potential_factors = primes(n + 1)
@@ -68,43 +159,10 @@ def factors(n):
         i += 1
     return prime_factors
 
-def binom(n, r):
-    """Returns 'n choose r'. """
-    return (factorial(n) / ((factorial(r) * factorial(n - r))))
 
-def is_palindrome(s):
-    """ Test whether or not string is palindrome """
-    if s == s[::-1]:
-        return True
-    else:
-        return False
-
-def prod(l):
-    """
-    Takes an iterable and returns product of numbers in iterable.
-    Will return 1 if iterable is empty.
-    """
-    p = 1
-    for arg in l:
-        p *= arg
-    return p
-
-def is_pandigital(n):
-    digits = len(n)
-    if digits >= 10:
-        return False
-    string_n = str(n)
-    for i in range(1, digits + 1):
-        if str(i) not in string_n:
-            return False
-    return True
-
-def word_score(name):
-    c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
-    score = 0
-    for c in name:
-        score += c_scores[c]
-    return score
+########################################
+############### Sequences ##############
+########################################
 
 def is_pent(n):
     # n = (3 * x**2 - x)/2
@@ -129,14 +187,3 @@ def is_hex(n):
     if hex_test == int(hex_test):
         return True
     return False
-
-def digit_permutations(n):
-    return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
-
-def count_digits(n):
-    """ Count digits in positive integer n. """
-    count = 0
-    while n >= 1:
-        count += 1
-        n //= 10
-    return count
