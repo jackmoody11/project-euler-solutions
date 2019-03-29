@@ -7,7 +7,7 @@ def compute():
 	# n * 9^5 is still less than the number (which is at least 10^n).
     # Further, the sum of 6 digits raised to the fifth power can't exceed 6 * 9^5 = 354,294
 	ans = sum(i for i in range(2, 354294) if i == fifth_power_digit_sum(i))
-	return str(ans)
+	return ans
 
 
 def fifth_power_digit_sum(n):
