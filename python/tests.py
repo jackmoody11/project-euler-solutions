@@ -19,6 +19,7 @@ def main():
 			prob, int(round(elapsedtime * 1000)),
 			"" if actual == expected else "    *** FAIL ***"))
 	print("Total computation time: {} ms".format(int(round(total_time * 1000))))
+	print("{} problems solved".format(len(ANSWERS)))
 
 
 if __name__ == "__main__":
