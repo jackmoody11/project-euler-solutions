@@ -1,26 +1,22 @@
 # Find starting number (between 1 and 1,000,000) that
 # has the longest collatz string (iterations to 1)
-
-def length_collatz(n):
-    i = 1
-    while True:
-        if n == 1:
-            return i
-        elif n % 2 == 0:
-            n /= 2
-        else:
-            n = 3 * n + 1
-        i += 1
-
+# If we get to a known collatz length, add that to the
+# current count, and we are done - will save a lot of time
 
 def compute():
-    my_max = (0, 0)  # (starting value, number of steps)
-    for i in range(1, 1_000_001):
-        l = length_collatz(i)
-        if l > my_max[1]:
-            my_max = (i, l)
-    return my_max[0]
-
+    LIMIT = 1_000_001
+    length_collatz = [0] * LIMIT
+    for i in range(2, LIMIT):
+        count = 0
+        x = i
+        while x >= i and x != 1:
+            count += 1
+            if x % 2 == 0:
+                x //= 2
+            else:
+                x = x * 3 + 1
+        length_collatz[i] = length_collatz[x] + count
+    return length_collatz.index(max(length_collatz))
 
 if __name__ == '__main__':
     print(compute())
