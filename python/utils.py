@@ -1,18 +1,19 @@
 from math import sqrt
 from math import factorial
+from itertools import permutations
+from itertools import combinations
 import string
 
 
 def is_prime(n):
+    """ Test if integer n is prime. """
     # Negative numbers don't count as primes
     if n < 2:
         return False
-
     # primes always gives 2 in list, so return True
     # if given n = 2
     elif n == 2:
         return True
-    
     potential_prime_divisors = primes(int(n**0.5) + 1)
     for p in potential_prime_divisors:
         if n % p == 0:
@@ -20,6 +21,10 @@ def is_prime(n):
     return True
 
 def primes_list(n):
+    """
+    Return first n primes. 
+    Different from primes function which returns primes less than n.
+    """
     if n == 1:
         return [2]
     elif n == 2:
@@ -42,11 +47,33 @@ def primes(n):
             sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
     return [2] + [i for i in range(3,n,2) if sieve[i]]
 
+def prime_cache(n):
+    """ True/False list of primes from 0 to n-1 """
+    sieve = [False, False] + [True] * (n-2)
+    sieve[4::2] = [False] * ((n-3)//2)
+    for i in range(3,int(n**0.5)+1,2):
+        if sieve[i]:
+            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+    return sieve
+
+def factors(n):
+    """ Return list of prime factors for integer n. """
+    potential_factors = primes(n + 1)
+    prime_factors = []
+    i = 0
+    while n != 1:
+        while n % potential_factors[i] == 0:
+            n /= potential_factors[i]
+            prime_factors.append(potential_factors[i])
+        i += 1
+    return prime_factors
+
 def binom(n, r):
     """Returns 'n choose r'. """
     return (factorial(n) / ((factorial(r) * factorial(n - r))))
 
 def is_palindrome(s):
+    """ Test whether or not string is palindrome """
     if s == s[::-1]:
         return True
     else:
@@ -102,3 +129,14 @@ def is_hex(n):
     if hex_test == int(hex_test):
         return True
     return False
+
+def digit_permutations(n):
+    return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
+
+def count_digits(n):
+    """ Count digits in positive integer n. """
+    count = 0
+    while n >= 1:
+        count += 1
+        n //= 10
+    return count
