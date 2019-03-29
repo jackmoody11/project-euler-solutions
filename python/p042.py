@@ -13,7 +13,6 @@ def compute():
     with open(file, 'r') as f:
         csv_f = csv.reader(f)
         words = list(csv_f)[0]
-    
     # Count number of words that are triangle words
     return sum([is_triangle_word(word) for word in words])
 
