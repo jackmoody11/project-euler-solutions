@@ -1,16 +1,11 @@
 # Find the smallest number that is divisible by the numbers 1, 2, ..., 20
-def is_divisible_up_to(x, n):
-    for i in range(2, n):
-        if x % i != 0:
-            return False
-    return True
-
+from utils import prod
 
 def compute():
-    x = 2520
-    while not is_divisible_up_to(x, 20):
-        x += 20
-    return x
+    # Find the greatest number of prime factors
+    # for each prime and multiply them
+    # By hand, this gives prod([2**4, 3**2, 5, 7, 11, 13, 17, 19])
+    return prod([2**4, 3**2, 5, 7, 11, 13, 17, 19])
 
 
 if __name__ == '__main__':
