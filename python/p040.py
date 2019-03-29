@@ -4,7 +4,6 @@ def find_max_digits():
     while count <= 1000000:
         place += 1
         count += 9 * place * 10**(place-1)
-    print(place)
 
 def compute():
     my_str = ""
@@ -13,7 +12,7 @@ def compute():
         my_str += str(i)
     for i in range(7):
         prod *= int(my_str[10**i])
-    print(prod)
+    return prod
 
 if __name__ == "__main__":
-    print(compute())    
+    print(compute())
