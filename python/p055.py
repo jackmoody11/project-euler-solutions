@@ -6,7 +6,7 @@ def is_lychrel(n, limit):
         count += 1
         n_reverse = str(n)[::-1]
         new = n + int(n_reverse)
-        if is_palindrome(str(new)):
+        if is_palindrome(new):
                 return False
         n = new
     return True

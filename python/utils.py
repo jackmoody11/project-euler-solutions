@@ -115,11 +115,19 @@ def word_score(name):
 ########################################
 
 def is_palindrome(s):
-    """ Test whether or not string is palindrome """
-    if s == s[::-1]:
-        return True
+    """ Test whether or not string or int is palindrome """
+    if isinstance(s, str):
+        if s == s[::-1]:
+            return True
+        else:
+            return False
+    if isinstance(s, int):
+        if str(s) == str(s)[::-1]:
+            return True
+        else:
+            return False
     else:
-        return False
+        raise AssertionError("Please enter str")
 
 def digit_permutations(n):
     return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
