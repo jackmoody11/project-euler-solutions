@@ -62,18 +62,17 @@ def is_prime(n):
     >>> is_prime(11)
     True
     """
-    # Negative numbers don't count as primes
     if n < 2:
         return False
-    # primes always gives 2 in list, so return True
-    # if given n = 2
-    elif n == 2:
+    elif n == 2 or n == 3:
         return True
-    potential_prime_divisors = primes(int(n**0.5) + 1)
-    for p in potential_prime_divisors:
-        if n % p == 0:
-            return False
-    return True
+    elif n % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(sqrt(n)) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
 
 def primes_list(n):
     """
