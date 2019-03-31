@@ -127,9 +127,17 @@ def prime_cache(n):
 ########################################
 
 def word_score(name):
+    """
+    Map letters to scores {'A': 1, 'B': 2, ..., 'Z': 26}.
+    Upper and lowercase both receive same score.
+    >>> word_score('a')
+    1
+    >>> word_score('Python')
+    1
+    """
     c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
     score = 0
-    for c in name:
+    for c in name.upper():
         score += c_scores[c]
     return score
 
@@ -179,6 +187,17 @@ def count_digits(n):
     return count
 
 def is_pandigital(n):
+    """
+    Returns whether number is pandigital
+    >>> is_pandigital('123')
+    True
+    >>> is_pandigital('1232')
+    False
+    """
+    # Accept both str and int
+    if isinstance(n, int):
+        n = str(n)
+
     digits = len(n)
     if digits >= 10:
         return False
