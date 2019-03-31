@@ -12,6 +12,9 @@ This repo hosts my personal solutions to Project Euler questions and is intended
 
 Note: My solutions are by **no** means optimized. They are a work in progress. 
 
+### Progress
+![My Project Euler Badge](https://projecteuler.net/profile/jackmoody11.png)
+
 
 | Problem # | Python | C |
 | ------ | ------ | - |
