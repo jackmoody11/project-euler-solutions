@@ -1,6 +1,7 @@
 # Python
 /venv
 .idea
+.env
 # A file for running by quick thoughts on my local computer
 python/scratch.py
 python/speed.py 
@@ -12,3 +13,6 @@ __pycache__/
 
 # VS Code
 .vscode/
+
+# Debugging
+*.dSYM
