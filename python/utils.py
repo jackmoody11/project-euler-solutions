@@ -1,5 +1,6 @@
 from math import sqrt
 from math import factorial
+from math import log
 from itertools import permutations
 from itertools import combinations
 from itertools import chain
@@ -80,32 +81,25 @@ def primes_list(n):
     Different from primes function.
     >>> primes_list(5)
     [2, 3, 5, 7, 11]
+
+    See https://stackoverflow.com/questions/4911777/finding-first-n-primes
+    for source of upper bound
     """
-    if n == 1:
-        return [2]
-    elif n == 2:
-        return [2, 3]
-    prime_count = 2
-    i = 5
-    p_list = [2, 3]
-    while prime_count < n:
-        if is_prime(i):
-            p_list.append(i)
-            prime_count += 1
-        i += 2
-    return p_list
+    count = 0
+    if n <= 7:
+        p_list = [2,3,5,7,11,13,17]
+        return p_list[:n]
+    else:
+        upper_bound = int(n * log(n) + n * log(log(n)))
+        return primes(upper_bound)[:n]
 
 def primes(n):
     """
-    Returns  a list of primes < n
+    Returns a list of primes < n
     >>> primes(10)
     [2, 3, 5, 7]
     """
-    sieve = [True] * n
-    for i in range(3,int(n**0.5)+1,2):
-        if sieve[i]:
-            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
-    return [2] + [i for i in range(3,n,2) if sieve[i]]
+    return [i for i, v in enumerate(prime_cache(n)) if v]
 
 def prime_cache(n):
     """
@@ -113,13 +107,12 @@ def prime_cache(n):
     >>> prime_cache(10)
     [False, False, True, True, False, True, False, True, False, False]
     """
-    sieve = [False, False] + [True] * (n-2)
-    sieve[4::2] = [False] * ((n-3)//2)
+    cache = [False, False] + [True] * (n-2)
+    cache[4::2] = [False] * ((n-3)//2)
     for i in range(3,int(n**0.5)+1,2):
-        if sieve[i]:
-            sieve[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
-    return sieve
-
+        if cache[i]:
+            cache[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+    return cache
 
 ########################################
 ############ String Scoring ############
