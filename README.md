@@ -61,13 +61,13 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 041 | [Solution](/python/p041.py) | X |
 | 042 | [Solution](/python/p042.py) | X |
 | 043 | [Solution](/python/p043.py) | X |
-| 044 | X | X |
+| 044 | [Solution](/python/p044.py) | X |
 | 045 | [Solution](/python/p045.py) | X |
 | 046 | [Solution](/python/p046.py) | X |
 | 047 | [Solution](/python/p047.py) | X |
 | 048 | [Solution](/python/p048.py) | X |
 | 049 | [Solution](/python/p049.py) | X |
-| 050 | X | X |
+| 050 | [Solution](/python/p050.py) | X |
 | 051 | X | X |
 | 052 | [Solution](/python/p052.py) | X |
 | 053 | [Solution](/python/p053.py) | X |
