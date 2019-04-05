@@ -74,7 +74,12 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 054 | [Solution](/python/p054.py) | X |
 | 055 | [Solution](/python/p055.py) | X |
 | 056 | [Solution](/python/p056.py) | X |
-| 057 | X | X |
+| 057 | [Solution](/python/p057.py) | X |
 | 058 | [Solution](/python/p058.py) | X |
+| 059 | [Solution](/python/p059.py) | X |
+| 060 | X | X |
+| 061 | X | X |
+| 062 | [Solution](/python/p062.py) | X |
+| 063 | [Solution](/python/p063.py) | X |
 | ... | X | X |
 | 067 | [Solution](/python/p067.py) | X |
