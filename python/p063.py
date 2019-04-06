@@ -1,6 +1,14 @@
 from math import ceil, floor
 
 def n_digit_numpow(n):
+    """
+    Returns number of integers j where 
+    j**n is an n-digit number.
+    >>> n_digit_numpow(1)
+    9
+    >>> n_digit_numpow(2)
+    6
+    """
     count = 0
     if n < 1:
         raise ValueError("n must be >= 1")
