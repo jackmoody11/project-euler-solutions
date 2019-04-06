@@ -1,5 +1,6 @@
 # Not yet solved
 from utils import is_pent
+from collections import deque
 
 def pent(n):
     return (3 * n**2 - n) / 2
@@ -13,11 +14,11 @@ def sum_diff_pent(pk, pj):
 def compute():
     k = 2
     # Store pentagonal numbers less than k
-    pents = [1]
+    pents = deque([1])
     min_d = None
     while True:
         pk = pent(k)
-        for pj in reversed(pents):
+        for pj in pents:
             diff = pk - pj
             # Break if differences get bigger than existing minimum
             if min_d and diff >= min_d:
@@ -26,7 +27,7 @@ def compute():
             elif sum_diff_pent(pk, pj):
                 min_d = diff
         # Add k to pents before continuing
-        pents.append(pk)
+        pents.appendleft(pk)
         k += 1
         # If smallest difference is greater than minimum (when min has been set), break
         if min_d and pent(k) - pent(k - 1) > min_d:
