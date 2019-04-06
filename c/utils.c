@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "utils.h"
 
+// Needs to be optimized (use sieve)
 int is_prime(long n)
 {
     if (n < 2)

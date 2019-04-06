@@ -1,24 +1,6 @@
 #include <stdio.h>
 
-long len_collatz(long n)
-{
-    int i = 1;
-    while(1){
-        if (n == 1)
-        {
-            return i;
-        }
-        else if (n % 2 == 0)
-        {
-            n /= 2;
-        }
-        else
-        {
-            n = 3 * n + 1;
-        }
-        i++;
-    }  
-}
+long len_collatz(long n);
 
 int main()
 {
@@ -34,4 +16,26 @@ int main()
         }
     }
     printf("%ld\n", max_n);
+}
+
+
+long len_collatz(long n)
+{
+    int i = 1;
+    while (1)
+    {
+        if (n == 1)
+        {
+            return i;
+        }
+        else if (n % 2 == 0)
+        {
+            n /= 2;
+        }
+        else
+        {
+            n = 3 * n + 1;
+        }
+        i++;
+    }  
 }

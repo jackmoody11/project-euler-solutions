@@ -11,9 +11,12 @@ int main()
 
 long find_ab()
 {
-    for (int a = 1; a < 500; a++)
+    // Limit of size of a or b
+    int limit = 500;
+    for (int a = 1; a < limit; a++)
     {
-        for (int b = 1; b < 500; b++)
+        // Assume that b will be at least as great as a so as not to go over the same a, b combo twice
+        for (int b = a; b < limit; b++)
         {
             if (a + b + sqrt(pow(a, 2) + pow(b, 2)) == 1000)
             {

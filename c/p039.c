@@ -1,17 +1,6 @@
 #include <stdio.h>
 
-int num_solutions(int p)
-{
-    int solutions = 0;
-    for (long a = 2; a < (p/3); a++) 
-    { 
-        if (p*(p-2*a) % (2*(p-a)) == 0)
-        { 
-            solutions++; 
-        } 
-    }
-    return solutions; 
-}
+int num_solutions(int p);
 
 int main()
 {
@@ -27,4 +16,18 @@ int main()
         }
     }
     printf("%d\n", result);
+}
+
+
+int num_solutions(int p)
+{
+    int solutions = 0;
+    for (long a = 2; a < (p/3); a++) 
+    { 
+        if (p*(p-2*a) % (2*(p-a)) == 0)
+        { 
+            solutions++; 
+        } 
+    }
+    return solutions; 
 }

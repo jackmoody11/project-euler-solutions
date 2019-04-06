@@ -3,6 +3,21 @@
 #include <math.h>
 #include <stdio.h>
 
+int num_divisors(long n);
+
+int main()
+{
+    long i = 1;
+    long num = 1;
+    while (num_divisors(num) <= 500)
+    {
+        i += 1;
+        num += i;
+    }
+    printf("%ld\n", num);
+}
+
+
 int num_divisors(long n)
 {
     int res = 0;
@@ -19,16 +34,4 @@ int num_divisors(long n)
         res += 1;
     }
     return res;
-}
-
-int main()
-{
-    long i = 1;
-    long num = 1;
-    while (num_divisors(num) <= 500)
-    {
-        i += 1;
-        num += i;
-    }
-    printf("%ld\n", num);
 }
