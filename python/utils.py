@@ -162,7 +162,20 @@ def is_palindrome(s):
         raise AssertionError("Please enter str")
 
 def digit_permutations(n):
-    return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
+    """
+    Find all permutations of digits of number. 
+    Permutation cannot start with 0 unless n = 0.
+    >>> digit_permutations(123)
+    {321, 132, 231, 213, 312, 123}
+    >>> digit_permutations(11)
+    {11}
+    >>> digit_permutations(10)
+    {10}
+    """
+    if n != 0:
+        return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
+    else:
+        return {0}
 
 def count_digits(n):
     """
