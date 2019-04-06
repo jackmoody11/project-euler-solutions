@@ -1,3 +1,6 @@
+# Thanks to https://radiusofcircle.blogspot.com/2016/06/problem-47-project-euler-solution-with-python.html
+# This post helped me rethink how to not double count and reduce number of primes I was counting
+
 def unique_prime_factors(n):
     """ Return set of prime factors for integer n. """
     prime_factors = set()
