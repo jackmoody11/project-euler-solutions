@@ -29,14 +29,14 @@ def binom(n, r):
     """
     Returns 'n choose r'.
     >>> binom(5, 2)
-    10.0
+    10
     """
     return factorial(n) // ((factorial(r) * factorial(n - r)))
 
 def lcm(*nums):
     """
     Find least common multiple of multiple numbers
-    >>> lcm(*range(1, 3))
+    >>> lcm(*range(1, 4))
     6
     >>> lcm(2,3,4)
     12
@@ -125,7 +125,7 @@ def word_score(name):
     >>> word_score('a')
     1
     >>> word_score('Python')
-    1
+    98
     """
     c_scores = {string.ascii_uppercase[i]: i + 1 for i in range(26)}
     score = 0
@@ -165,12 +165,12 @@ def digit_permutations(n):
     """
     Find all permutations of digits of number. 
     Permutation cannot start with 0 unless n = 0.
-    >>> digit_permutations(123)
-    {321, 132, 231, 213, 312, 123}
-    >>> digit_permutations(11)
-    {11}
-    >>> digit_permutations(10)
-    {10}
+    >>> digit_permutations(123) == {321, 132, 231, 213, 312, 123}
+    True
+    >>> digit_permutations(11) == {11}
+    True
+    >>> digit_permutations(10) == {10}
+    True
     """
     if n != 0:
         return set([int(''.join(p)) for p in permutations(str(n)) if p[0] != '0'])
