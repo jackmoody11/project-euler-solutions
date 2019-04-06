@@ -1,5 +1,5 @@
 import importlib, time
-
+import doctest
 
 filename = "../answers.txt"
 
@@ -7,7 +7,7 @@ with open(filename, 'r') as f:
     lines = [line.strip() for line in f.readlines()]
     ANSWERS = {int(line.split(". ")[0]): int(line.split(". ")[1]) for line in lines}
 
-def main():
+def main(doctests=False):
 	total_time = 0.0  # In seconds
 	for (prob, expected) in sorted(ANSWERS.items()):
 		module = importlib.import_module("p{:03d}".format(prob))
@@ -20,6 +20,14 @@ def main():
 			"" if actual == expected else "    *** FAIL ***"))
 	print("Total computation time: {} ms".format(int(round(total_time * 1000))))
 	print("{} problems solved".format(len(ANSWERS)))
+
+	if doctests:
+		doctesting()
+
+def doctesting():
+	import utils
+	doctest.testmod(utils)
+	return 0
 
 
 if __name__ == "__main__":
