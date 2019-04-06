@@ -1,3 +1,4 @@
+# Needs to be optimized further
 from utils import primes
 
 CACHE = primes(500_000)
