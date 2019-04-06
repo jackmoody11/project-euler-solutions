@@ -1,15 +1,17 @@
-# Not yet solved
 from utils import is_pent
-from collections import deque
+from collections import deque  # Not sure if this is faster than list and reversed
+
 
 def pent(n):
     return (3 * n**2 - n) / 2
+
 
 def sum_diff_pent(pk, pj):
     if pk > pj:
         return is_pent(pk - pj) and is_pent(pk + pj)
     else:
         return is_pent(pj - pk) and is_pent(pj + pk)
+
 
 def compute():
     k = 2
