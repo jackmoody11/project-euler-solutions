@@ -49,7 +49,18 @@ def lcm(*nums):
         max_occurences = max([fc.get(factor, 0) for fc in factor_counts])
         result *= factor ** max_occurences
     return result
-    
+
+def is_int(x):
+    """
+    Returns if a given number is an integer.
+    >>> is_int(2.0)
+    True
+    >>> from math import sqrt; is_int(sqrt(4))
+    True
+    >>> is_int(5/2)
+    False
+    """
+    return int(x) == x
 
 ########################################
 ################ Primes ################
