@@ -125,6 +125,22 @@ def prime_cache(n):
             cache[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
     return cache
 
+def phi(n, cache=None):
+    """
+    Returns number of natural numbers which are less than and relatively prime to n.
+    >>> phi(2)
+    1
+    >>> phi(7)
+    6
+    """
+    if n == 1:
+        return 1
+    elif n < 1:
+        raise AssertionError('Please enter an int > 0')
+    else:
+        return int(n * prod([1 - 1/p for p in set(factors(n, cache))]))
+
+
 ########################################
 ############ String Scoring ############
 ########################################
@@ -239,7 +255,7 @@ def digital_sum(n):
 ############### Factors ################
 ########################################
 
-def factors(n):
+def factors(n, cache=None):
     """
     Return list of prime factors for integer n.
     >>> factors(35)
@@ -247,7 +263,10 @@ def factors(n):
     >>> factors(24)
     [2, 2, 2, 3]
     """
-    potential_factors = primes(n + 1)
+    if cache is None or max(cache) < n:
+        potential_factors = primes(n + 1)
+    else:
+        potential_factors = cache
     prime_factors = []
     i = 0
     while n != 1:
