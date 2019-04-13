@@ -153,6 +153,29 @@ def list_totients(n):
                 results[j] -= results[j] // i
     return results
 
+def farey(n, a=None, b=None, c=None, d=None):
+    """Print the nth Farey sequence, ascending."""
+    pairs = []
+    if any(i is None for i in (a,b,c,d)):
+        a, b, c, d = 1, n, 1, n-1
+    pairs.append((a,b))
+    while c <= n:
+        k = int((n + b) / d)
+        a, b, c, d = c, d, (k*c-a), (k*d-b)
+        pairs.append((a,b))
+    return pairs
+
+def farey_count(n, a, b, num, denom):
+    """Find number of proper fractions for b <= n in between a/b and num/denom"""
+    count = 0
+    c, d = n / b, n - 1
+    while c != num and d != denom:
+        k = int((n + b) / d)
+        a, b, c, d = c, d, (k*c-a), (k*d-b)
+        count += 1
+    return count
+
+
 ########################################
 ############ String Scoring ############
 ########################################
