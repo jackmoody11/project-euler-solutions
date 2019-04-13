@@ -86,3 +86,6 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 | 068 | [Solution](/python/p068.py) | X | X |
 | 069 | [Solution](/python/p069.py) | X | X |
 | 070 | [Solution](/python/p070.py) | X | X |
+| 071 | [Solution](/python/p071.py) | X | X |
+| 072 | [Solution](/python/p072.py) | X | X |
+| 073 | [Solution](/python/p073.py) | X | X |
