@@ -140,6 +140,18 @@ def phi(n, cache=None):
     else:
         return int(n * prod([1 - 1/p for p in set(factors(n, cache))]))
 
+def list_totients(n):
+    """
+    List of totients up to n, inclusive.
+    Used from nayuki's eulerlib.
+    https://github.com/nayuki/Project-Euler-solutions/blob/master/python/eulerlib.py
+    """
+    results = list(range(n + 1))
+    for i in range(2, len(results)):
+        if results[i] == i:
+            for j in range(i, len(results), i):
+                results[j] -= results[j] // i
+    return results
 
 ########################################
 ############ String Scoring ############
@@ -238,6 +250,12 @@ def is_pandigital(n):
         if str(i) not in string_n:
             return False
     return True
+
+def is_permutation(a, b):
+    if sorted(str(a)) == sorted(str(b)):
+        return True
+    else:
+        return False
 
 def digital_sum(n):
     """
