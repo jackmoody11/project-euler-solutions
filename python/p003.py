@@ -4,17 +4,15 @@
 # to sqrt of the number (it is not prime itself)
 from math import sqrt
 from utils import is_prime
-
-
-def prime_factors(x):
-    max_div = 0
-    for i in range(2, int(sqrt(x)) + 1):
-        if x % i == 0 and is_prime(i):
-            max_div = i
-    return max_div
+    
+TARGET = 600_851_475_143 
 
 def compute():
-    return prime_factors(600851475143)
+    max_div = 0
+    for i in range(2, int(sqrt(TARGET)) + 1):
+        if TARGET % i == 0 and is_prime(i):
+            max_div = i
+    return max_div
 
 if __name__ == '__main__':
     print(compute())
