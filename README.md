@@ -18,7 +18,7 @@ Note: My solutions are by **no** means optimized. They are a work in progress.
 
 | Problem # | Python | C | Java |
 | ------ | ------ | - | ---- |
-| 001 | [Solution](/python/p001.py) | [Solution](/c/p001.c) | [Solution](/java/p001.java) |
+| 001 | [Solution](/python/p001.py) - [Alternate Solution](/python/p001_alt.py)  | [Solution](/c/p001.c) | [Solution](/java/p001.java) |
 | 002 | [Solution](/python/p002.py) | [Solution](/c/p002.c) | [Solution](/java/p002.java) |
 | 003 | [Solution](/python/p003.py) | [Solution](/c/p003.c) | [Solution](/java/p003.java) |
 | 004 | [Solution](/python/p004.py) | [Solution](/c/p004.c) | [Solution](/java/p004.java) |
