@@ -128,3 +128,4 @@ Total computation time: 134 ms
 | 071 | [Solution](/python/p071.py) | X | X |
 | 072 | [Solution](/python/p072.py) | X | X |
 | 073 | [Solution](/python/p073.py) | X | X |
+| 074 | [Solution](/python/p074.py) | X | X |
