@@ -10,7 +10,46 @@ This repo hosts my personal solutions to Project Euler questions and is intended
 4. If you found a better way, send a pull request!
 
 
-Note: My solutions are by **no** means optimized. They are a work in progress. 
+Note: My solutions are by **no** means optimized. They are a work in progress.
+
+### Testing
+You can test any of the Python solutions. I would appreciate any help with testing in Java and/or C as well. To test all Python solutions, while in the python directory you can run
+
+```sh
+python3 tests.py
+```
+
+The output will look something like this:
+```
+Problem 001:       0 ms
+Problem 002:       0 ms
+Problem 003:     108 ms
+Problem 004:     296 ms
+Problem 005:       0 ms
+...
+Problem 071:       0 ms
+Problem 073:    4131 ms
+Total computation time: 85898 ms
+67 problems solved
+```
+
+If you would like to only run specific tests, you can do so by running something like
+```sh
+# Separate each problem number with a space (no zero padding)
+python3 tests.py 2 3 5 7
+```
+
+which will output
+
+```
+Problem 002:       0 ms
+Problem 003:     111 ms
+Problem 005:       0 ms
+Problem 007:      13 ms
+Total computation time: 134 ms
+4 problems solved
+```
+
 
 ### Progress
 ![My Project Euler Badge](https://projecteuler.net/profile/jackmoody11.png)
