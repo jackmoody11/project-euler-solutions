@@ -3,9 +3,14 @@
 from math import sqrt
 
 def compute():
-    for a in range(1, 500):
+    """
+    We define a as the shortest side, and since a + b + c = 1000, a < 333.
+    """
+    for a in range(1, 333):
         for b in range(a, 1000):
-            if a + b + sqrt(a**2 + b**2) == 1000:
+            if a + b + sqrt(a**2 + b**2) > 1000:
+                break
+            elif a + b + sqrt(a**2 + b**2) == 1000:
                 return a * b * sqrt(a**2 + b**2)
 
 if __name__ == '__main__':
