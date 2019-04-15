@@ -247,11 +247,7 @@ def count_digits(n):
     >>> count_digits(2)
     1
     """
-    count = 0
-    while n >= 1:
-        count += 1
-        n //= 10
-    return count
+    return len(str(n))
 
 def is_pandigital(n):
     """
