@@ -2,6 +2,7 @@
 /venv
 .idea
 .env
+*.pyc
 
 # A file for running by quick thoughts on my local computer
 python/scratch.py
