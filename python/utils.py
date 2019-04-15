@@ -282,11 +282,11 @@ def digital_sum(n):
     >>> digital_sum(123)
     6
     """
-    total = 0
-    while n != 0:
-        total += n % 10
-        n //= 10
-    return total
+    r = 0
+    while n:
+       r, n = r + n % 10, n // 10
+    return r
+
 
 ########################################
 ############### Factors ################
