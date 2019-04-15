@@ -1,5 +1,5 @@
-from math import factorial
-
+FACTORIALS = {0: 1, 1: 1, 2: 2, 3: 6, 4: 24,
+              5: 120, 6: 720, 7: 5_040, 8: 40_320, 9: 362_880}
 LIMIT = 1_000_000  
 
 def compute():
@@ -17,7 +17,7 @@ def compute():
         while n not in seen:
             seen.add(n)
             count += 1
-            n = sum([factorial(int(c)) for c in str(n)])
+            n = sum([FACTORIALS[int(c)] for c in str(n)])
             if n < i:
                 count += seq_len[n]
                 break
