@@ -1,5 +1,4 @@
 # Find the smallest triangle number that has over five hundred divisors
-# Need to check that this works (is currently taking too long)
 from math import sqrt
 
 
@@ -18,16 +17,10 @@ def num_divisors(n):
 
 
 def compute():
-    i, num = 1, 1
-    while True:
-        if num_divisors(num) > 500:
-            return num
-        else:
-            # We are working with triangle numbers, so add 1, 2, 3, etc.
-            # until num. of divisors > 500
-            i += 1
-            num += i
-
+    n = 1
+    while num_divisors(n*(n+1) // 2) < 500:
+        n += 1
+    return n*(n+1) // 2
 
 if __name__ == '__main__':
     print(compute())
