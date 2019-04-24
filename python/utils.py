@@ -11,7 +11,7 @@ import string
 ############# Basic Math ###############
 ########################################
 
-def prod(l):
+def prod(iterable):
     """
     Takes an iterable and returns product of numbers in iterable.
     Will return 1 if iterable is empty.
@@ -21,7 +21,7 @@ def prod(l):
     30
     """
     p = 1
-    for arg in l:
+    for arg in iterable:
         p *= arg
     return p
 
