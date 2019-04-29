@@ -58,7 +58,7 @@ python3 tests.py 1 2 3 4 5 6 7 8 9 10 -g
 
 ![Tests with graph](/tests_graph.png)
 
-In order to ensure the functions in utils are working as expected (without creating an official testing folder), doctests have been added to the docstrings. Adding the `--doctest` option when running tests.py will run a verbose doctest on utils.py.
+In order to ensure the functions in [utils.py](python/utils.py) are working as expected (without creating an official testing folder), doctests have been added to the docstrings. Adding the `--doctest` option when running [tests.py](python/tests.py) will run a verbose doctest on [utils.py](python/utils.py).
 
 ### Progress
 ![My Project Euler Badge](https://projecteuler.net/profile/jackmoody11.png)
