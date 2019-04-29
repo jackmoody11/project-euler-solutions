@@ -3,7 +3,6 @@
 This repo hosts my personal solutions to Project Euler questions and is intended to help with ideas **after** writing your own solutions.
 
 ## The Process
----------------
 1. Solve the problem on your own
 2. Check if you got it right on the [Project Euler website](https://projecteuler.net)
 3. See if my solutions give you any ideas on how to optimize
@@ -13,7 +12,6 @@ This repo hosts my personal solutions to Project Euler questions and is intended
 Note: My solutions are by **no** means optimized. They are a work in progress.
 
 ## Testing
-----------
 You can test any of the Python solutions. I would appreciate any help with testing in Java and/or C as well. To test all Python solutions, while in the python directory you can run
 
 ```sh
