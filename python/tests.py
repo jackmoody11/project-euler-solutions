@@ -68,7 +68,7 @@ def main(doctests=False):
 
 def doctesting():
     import utils
-    doctest.testmod(utils)
+    doctest.testmod(utils, verbose=True)
     return 0
 
 
