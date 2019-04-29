@@ -2,8 +2,8 @@
 
 This repo hosts my personal solutions to Project Euler questions and is intended to help with ideas **after** writing your own solutions.
 
-### The Process
-
+## The Process
+---------------
 1. Solve the problem on your own
 2. Check if you got it right on the [Project Euler website](https://projecteuler.net)
 3. See if my solutions give you any ideas on how to optimize
@@ -12,7 +12,8 @@ This repo hosts my personal solutions to Project Euler questions and is intended
 
 Note: My solutions are by **no** means optimized. They are a work in progress.
 
-### Testing
+## Testing
+----------
 You can test any of the Python solutions. I would appreciate any help with testing in Java and/or C as well. To test all Python solutions, while in the python directory you can run
 
 ```sh
@@ -50,6 +51,16 @@ Total computation time: 134 ms
 4 problems solved
 ```
 
+If you would like to graph the execution times of the problems tested, you can add the `-g` or `--graph` argument.
+
+```sh
+# -g and --graph are equivalent
+python3 tests.py 1 2 3 4 5 6 7 8 9 10 -g
+```
+
+![Tests with graph](/tests_graph.png)
+
+In order to ensure the functions in utils are working as expected (without creating an official testing folder), doctests have been added to the docstrings. Adding the `--doctest` option when running tests.py will run a verbose doctest on utils.py.
 
 ### Progress
 ![My Project Euler Badge](https://projecteuler.net/profile/jackmoody11.png)
