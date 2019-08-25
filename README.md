@@ -71,10 +71,10 @@ In order to ensure the functions in [utils.py](python/utils.py) are working as e
 | 003 | [Solution](/python/p003.py) | [Solution](/c/p003.c) | [Solution](/java/p003.java) |
 | 004 | [Solution](/python/p004.py) | [Solution](/c/p004.c) | [Solution](/java/p004.java) |
 | 005 | [Solution](/python/p005.py) | [Solution](/c/p005.c) | X |
-| 006 | [Solution](/python/p006.py) | [Solution](/c/p006.c) | X |
+| 006 | [Solution](/python/p006.py) | [Solution](/c/p006.c) | [Solution](/java/p006.java) |
 | 007 | [Solution](/python/p007.py) | [Solution](/c/p007.c) | X |
 | 008 | [Solution](/python/p008.py) | [Solution](/c/p008.c) | X |
-| 009 | [Solution](/python/p009.py) | [Solution](/c/p009.c) | X |
+| 009 | [Solution](/python/p009.py) | [Solution](/c/p009.c) | [Solution](/java/p009.java) |
 | 010 | [Solution](/python/p010.py) | [Solution](/c/p010.c) | X |
 | 011 | [Solution](/python/p011.py) | X | X |
 | 012 | [Solution](/python/p012.py) | [Solution](/c/p012.c) | X |
