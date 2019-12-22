@@ -1,4 +1,8 @@
 from math import gcd, sqrt
+""" All primitive pythagorean triples can be formed by finding 
+    s, t \in \Z such that s > t, gcd(s, t) = 1, and s \not\equiv t \mod(2).
+    Given any s, t satisfying these conditions, a^2 + b^2 = c^2 where 
+    a = 2st, b = s^2 - t^2, c = s^2 + t^2."""
 
 
 def _get_coprime_combos(s, limit):
@@ -20,7 +24,7 @@ def _get_coprime_combos(s, limit):
 
 def get_s_t_combos(s_limit):
     """ Get all combos of s and t that will make primitive 
-        Pythagorean triangle such that s > t, s \not\equiv t \mod{2},
+        Pythagorean triangle such that s > t, s \not\equiv t \mod(2),
         and \gcd(s, t) = 1. 
     """
     all_combos = []
