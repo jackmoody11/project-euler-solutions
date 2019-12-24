@@ -3,7 +3,6 @@ import time
 import doctest
 import sys
 import argparse
-import matplotlib.pyplot as plt
 
 
 filename = "../answers.txt"
@@ -17,8 +16,9 @@ with open(filename, 'r') as f:
 def test(prob, expected):
     try:
         module = importlib.import_module("p{:03d}".format(prob))
-    except ModuleNotFoundError:
-        raise ModuleNotFoundError(
+    except ImportError:
+
+        raise ImportError(
             "It looks like you haven't solved #{prob} yet".format(prob=prob))
     start = time.time()
     actual = int(module.compute())  # Must return an int
@@ -58,7 +58,7 @@ def main(doctests=False):
         num_probs = len(ANSWERS)
         prob_names = "(all)"
     total_time = sum(results.values())
-    print("Total computation time: {} ms".format(total_time))
+    print("Total computation time: {} secs".format(total_time / 1000))
     print("{} problems solved".format(num_probs))
     if args.doctest:
         doctesting()
@@ -73,11 +73,15 @@ def doctesting():
 
 
 def graph(data, probs):
+    import matplotlib.pyplot as plt
+    from matplotlib import rc
+
+    rc('text', usetex=True)
     plt.bar(data.keys(), data.values())
     plt.title(
         'Execution Time (secs) for Project Euler Problems {0}'.format(probs))
     plt.xlabel('Project Euler Problem Number')
-    plt.ylabel('Execution Time (secs)')
+    plt.ylabel('Execution Time (ms)')
     plt.show()
 
 

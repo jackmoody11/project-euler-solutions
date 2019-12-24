@@ -6,10 +6,24 @@ from itertools import combinations
 from itertools import chain
 import string
 
+########################################
+############# Memoization ##############
+########################################
+
+
+def memoize(func):
+    memo = {}
+
+    def helper(x):
+        if x not in memo:
+            memo[x] = func(x)
+        return memo[x]
+    return helper
 
 ########################################
 ############# Basic Math ###############
 ########################################
+
 
 def prod(iterable):
     """
@@ -25,6 +39,7 @@ def prod(iterable):
         p *= arg
     return p
 
+
 def binom(n, r):
     """
     Returns 'n choose r'.
@@ -32,6 +47,7 @@ def binom(n, r):
     10
     """
     return factorial(n) // ((factorial(r) * factorial(n - r)))
+
 
 def lcm(*nums):
     """
@@ -50,6 +66,7 @@ def lcm(*nums):
         result *= factor ** max_occurences
     return result
 
+
 def is_int(x):
     """
     Returns if a given number is an integer.
@@ -65,6 +82,7 @@ def is_int(x):
 ########################################
 ################ Primes ################
 ########################################
+
 
 def is_prime(n):
     """
@@ -86,6 +104,7 @@ def is_prime(n):
                 return False
         return True
 
+
 def primes_list(n):
     """
     Return first n primes. 
@@ -98,11 +117,12 @@ def primes_list(n):
     """
     count = 0
     if n <= 7:
-        p_list = [2,3,5,7,11,13,17]
+        p_list = [2, 3, 5, 7, 11, 13, 17]
         return p_list[:n]
     else:
         upper_bound = int(n * log(n) + n * log(log(n)))
         return primes(upper_bound)[:n]
+
 
 def primes(n):
     """
@@ -112,6 +132,7 @@ def primes(n):
     """
     return [i for i, v in enumerate(prime_cache(n)) if v]
 
+
 def prime_cache(n):
     """
     True/False list of primes from 0 to n-1
@@ -120,10 +141,11 @@ def prime_cache(n):
     """
     cache = [False, False] + [True] * (n-2)
     cache[4::2] = [False] * ((n-3)//2)
-    for i in range(3,int(n**0.5)+1,2):
+    for i in range(3, int(n**0.5)+1, 2):
         if cache[i]:
-            cache[i*i::2*i]=[False]*((n-i*i-1)//(2*i)+1)
+            cache[i*i::2*i] = [False]*((n-i*i-1)//(2*i)+1)
     return cache
+
 
 def phi(n, cache=None):
     """
@@ -140,6 +162,7 @@ def phi(n, cache=None):
     else:
         return int(n * prod([1 - 1/p for p in set(factors(n, cache))]))
 
+
 def list_totients(n):
     """
     List of totients up to n, inclusive.
@@ -153,17 +176,19 @@ def list_totients(n):
                 results[j] -= results[j] // i
     return results
 
+
 def farey(n, a=None, b=None, c=None, d=None):
     """Print the nth Farey sequence, ascending."""
     pairs = []
-    if any(i is None for i in (a,b,c,d)):
+    if any(i is None for i in (a, b, c, d)):
         a, b, c, d = 1, n, 1, n-1
-    pairs.append((a,b))
+    pairs.append((a, b))
     while c <= n:
         k = int((n + b) / d)
         a, b, c, d = c, d, (k*c-a), (k*d-b)
-        pairs.append((a,b))
+        pairs.append((a, b))
     return pairs
+
 
 def farey_count(n, a, b, num, denom):
     """Find number of proper fractions for b <= n in between a/b and num/denom"""
@@ -223,6 +248,7 @@ def is_palindrome(s):
     else:
         raise AssertionError("Please enter str")
 
+
 def digit_permutations(n):
     """
     Find all permutations of digits of number. 
@@ -239,6 +265,7 @@ def digit_permutations(n):
     else:
         return {0}
 
+
 def count_digits(n):
     """
     Count digits in positive integer n.
@@ -248,6 +275,7 @@ def count_digits(n):
     1
     """
     return len(str(n))
+
 
 def is_pandigital(n):
     """
@@ -270,11 +298,13 @@ def is_pandigital(n):
             return False
     return True
 
+
 def is_permutation(a, b):
     if sorted(str(a)) == sorted(str(b)):
         return True
     else:
         return False
+
 
 def digital_sum(n):
     """
@@ -284,13 +314,19 @@ def digital_sum(n):
     """
     r = 0
     while n:
-       r, n = r + n % 10, n // 10
+        r, n = r + n % 10, n // 10
     return r
 
+
+def get_digits(n):
+    while n > 0:
+        yield n % 10
+        n //= 10
 
 ########################################
 ############### Factors ################
 ########################################
+
 
 def factors(n, cache=None):
     """
@@ -333,6 +369,7 @@ def is_pent(n):
         return True
     return False
 
+
 def is_tri(n):
     """
     Same reasoning as is_pent
@@ -346,6 +383,7 @@ def is_tri(n):
     if tri_test == int(tri_test):
         return True
     return False
+
 
 def is_hex(n):
     """
