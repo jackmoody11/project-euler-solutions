@@ -11,7 +11,7 @@ def compute():
             if a + b + sqrt(a**2 + b**2) > 1000:
                 break
             elif a + b + sqrt(a**2 + b**2) == 1000:
-                return a * b * sqrt(a**2 + b**2)
+                return int(a * b * sqrt(a**2 + b**2))
 
 if __name__ == '__main__':
     print(compute())
