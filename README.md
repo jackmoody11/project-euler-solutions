@@ -142,6 +142,8 @@ In order to ensure the functions in [utils.py](python/utils.py) are working as e
 | 074 | [Solution](/python/p074.py) | X | X |
 | 075 | [Solution](/python/p075.py) | X | X |
 | ... | X | X | X |
+| 077 | [Solution](/python/p077.py) | X | X |
+| ... | X | X | X |
 | 080 | [Solution](/python/p080.py) | X | X |
 | 081 | [Solution](/python/p081.py) | X | X |
 | ... | X | X | X |
