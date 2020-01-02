@@ -9,8 +9,8 @@ filename = "../answers.txt"
 
 with open(filename, 'r') as f:
     lines = [line.strip() for line in f.readlines()]
-    ANSWERS = {int(line.split(". ")[0]): int(
-        line.split(". ")[1]) for line in lines}
+    ANSWERS = {int(line.split(". ")[0]):
+               line.split(". ")[1] for line in lines}
 
 
 def test(prob, expected):
