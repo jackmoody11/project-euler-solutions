@@ -156,3 +156,6 @@ In order to ensure the functions in [utils.py](python/utils.py) are working as e
 | 097 | [Solution](/python/p097.py) | X | X |
 | ... | X | X | X |
 | 099 | [Solution](/python/p099.py) | X | X |
+| ... | X | X | X |
+| 493 | [Solution](/python/p493.py) | X | X |
+| ... | X | X | X |
