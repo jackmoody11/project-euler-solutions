@@ -4,6 +4,9 @@ from math import log
 from itertools import permutations
 from itertools import combinations
 from itertools import chain
+from functools import reduce
+import operator
+from collections import Counter
 import string
 
 ########################################
@@ -34,10 +37,7 @@ def prod(iterable):
     >>> prod([2,3,5])
     30
     """
-    p = 1
-    for arg in iterable:
-        p *= arg
-    return p
+    return reduce(operator.mul, iterable, 1)
 
 
 def binom(n, r):
@@ -84,25 +84,40 @@ def is_int(x):
 ########################################
 
 
-def is_prime(n):
-    """
-    Test if integer n is prime.
-    >>> is_prime(25)
-    False
-    >>> is_prime(11)
+def is_prime(n, primes=None):
+    """ 
+    Test if integer n is prime and allow prime cache (ex: [2, 3, 5, 7, 11])
+    >>> is_prime(5, primes=[2, 3, 5])
+    True
+    >>> is_prime(100003, primes=[2, 3, 5])
+    True
+    >>> is_prime(37)
+    True
+    >>> is_prime(2)
     True
     """
     if n < 2:
         return False
-    elif n == 2 or n == 3:
-        return True
-    elif n % 2 == 0:
-        return False
-    else:
-        for i in range(3, int(sqrt(n)) + 1, 2):
-            if n % i == 0:
+    sqrt_n = int(sqrt(n))
+    if primes and n <= max(primes):
+        return n in primes
+    elif primes and sqrt_n <= max(primes):
+        for p in primes:
+            if p > sqrt_n:
+                break
+            if n % p == 0:
                 return False
         return True
+    else:
+        if n == 2 or n == 3:
+            return True
+        elif n % 2 == 0:
+            return False
+        else:
+            for i in range(3, sqrt_n + 1, 2):
+                if n % i == 0:
+                    return False
+            return True
 
 
 def primes_list(n):
@@ -350,9 +365,23 @@ def factors(n, cache=None):
     return prime_factors
 
 
+def tau(n, cache=None):
+    """ Return number of divisors of n.
+    >>> tau(5)
+    2
+    >>> tau(10)
+    4
+    >>> tau(16)
+    5
+    """
+    prime_factorization = Counter(factors(n, cache))
+    return prod((i+1 for i in prime_factorization.values()))
+
+
 ########################################
 ############### Sequences ##############
 ########################################
+
 
 def is_pent(n):
     """
@@ -398,3 +427,37 @@ def is_hex(n):
     if hex_test == int(hex_test):
         return True
     return False
+
+
+def fibonacci(n):
+    """ Return first n fibonacci numbers. 
+    >>> fibonacci(5)
+    [0, 1, 1, 2, 3]
+    >>> fibonacci(10)
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    """
+    fibs = [0] * n
+    fibs[1] = 1
+    for i in range(2, n):
+        fibs[i] = fibs[i-1] + fibs[i-2]
+    return fibs
+
+########################################
+################# Input ################
+########################################
+
+
+def read_matrix(file):
+    matrix = []
+    with open(file, 'r') as f:
+        for line in f:
+            matrix.append(list(map(int, line.strip().split(','))))
+    return matrix
+
+
+########################################
+############# Combinatorics ############
+########################################
+
+def ncr(n, r):
+    return factorial(n) // (factorial(r) * factorial(n-r))
