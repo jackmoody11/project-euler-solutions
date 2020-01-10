@@ -442,6 +442,38 @@ def fibonacci(n):
         fibs[i] = fibs[i-1] + fibs[i-2]
     return fibs
 
+
+def fibonacci_generator():
+    """
+    Generates fibonacci numbers.
+    """
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+
+def fast_fibonacci(n):
+    """ Returns the nth fibonacci number. Good if only calculating a few fibonacci numbers. """
+    return _fast_fibonacci(n)[0]
+
+
+def _fast_fibonacci(n):
+    """ 
+    Returns (F(n), F(n+1)) through doubling process. 
+    https://funloop.org/post/2017-04-14-computing-fibonacci-numbers.html
+    """
+    if n == 0:
+        return (0, 1)
+    else:
+        a, b = _fast_fibonacci(n // 2)
+        c = a * (b * 2 - a)
+        d = a**2 + b**2
+        if n % 2 == 1:
+            return (d, c + d)
+        else:
+            return (c, d)
+
 ########################################
 ################# Input ################
 ########################################

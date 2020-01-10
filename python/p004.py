@@ -8,7 +8,7 @@ def compute():
         # Only go to i (inclusive) to eliminate double counting
         for j in range(100, i + 1):
             num = i * j
-            if num > max_p and is_palindrome(str(num)):
+            if num > max_p and is_palindrome(num):
                 max_p = num
     return max_p
 
