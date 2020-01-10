@@ -3,7 +3,7 @@
 # smallest prime divisor, and thus we only need to check
 # to sqrt of the number (it is not prime itself)
 from math import sqrt
-from utils import is_prime, primes
+from utils import primes
 
 
 def compute():
