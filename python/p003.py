@@ -15,7 +15,7 @@ def compute():
             max_div = p
         while TARGET % p == 0:
             TARGET //= p
-    if TARGET > max_div and is_prime(TARGET):
+    if TARGET > max_div:
         return TARGET
     else:
         return max_div
